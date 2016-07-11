@@ -1,0 +1,25 @@
+typedef int datatype;
+typedef struct node
+{
+	datatype data;
+	struct node *prior,*next;
+}dlinklist;
+dlinklist *head;
+
+DInsertBefor(dlink *p,datatype x)
+{
+	dlinklist *s;
+	s = malloc(sizeof(dlinklist);
+	s->data = x;
+	s->prior = p->prior;
+	s->next  = p;
+	p->prior->next = s;
+	s->prior = s;
+}
+
+DeleteNodep(dlinklist *p)
+{
+	p->prior->next = p->next;
+	p->next->prior = p->prior;
+	free(p);
+}

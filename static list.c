@@ -10,7 +10,7 @@ typedef struct
 
 node nodepoll[Maxsize];
 cursor av;
-Initialize()
+void Initialize(void)
 {
 	int i;
 	for(i = 0;i<Maxsize -1;i++)
@@ -20,7 +20,7 @@ Initialize()
 	nodepool[Maxsize - 1].next = NULL;
 	av = 1;
 }
-Cursor GetNode()
+void Cursor GetNode(void)
 {
 	cursor p;
 	if(av = NULL)
@@ -32,7 +32,7 @@ Cursor GetNode()
 	}
 	return p;
 }
-FreeNodep(cursor p)
+void FreeNodep(cursor p)
 {
 	nodepool[p].next = av ;
 	av  = p ;
